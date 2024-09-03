@@ -34,11 +34,13 @@ enum layers {
 
 #define LALT_ES  MT(MOD_LALT, KC_ESC)
 #define RALT_QU  MT(MOD_RALT, KC_QUOTE)
-#define LSH_SPC  MT(MOD_LSFT, KC_SPC)
-#define RSH_SPC  MT(MOD_RSFT, KC_SPC)
+//#define LSH_SPC  MT(MOD_LSFT, KC_SPC)
+//#define RSH_SPC  MT(MOD_RSFT, KC_SPC)
 #define LCT_NUB  MT(MOD_LCTL, KC_NUBS)
 #define RCT_NUH  MT(MOD_RCTL, KC_NUHS)
-#define SYM_ENT  LT(_SYM, KC_ENT)
+//#define SYM_ENT  LT(_SYM, KC_ENT)
+#define LSH_ENT  MT(MOD_LSFT, KC_ENT)
+#define RSH_ENT  MT(MOD_RSFT, KC_ENT)
 
 // Note: LAlt/Enter (ALT_ENT) is not the same thing as the keyboard shortcut Alt+Enter.
 // The notation `mod/tap` denotes a key that activates the modifier `mod` when held down, and
@@ -71,8 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
      LALT_ES , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                          KC_Y ,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC,
      KC_TAB  , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                          KC_H ,   KC_J ,  KC_K ,   KC_L ,KC_SCLN, RALT_QU,
-     LCT_NUB , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC, FKEYS ,     SYM    , KC_RBRC,   KC_N ,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, RCT_NUH,
-                                KC_DEL , KC_LGUI, KC_ENT , LSH_SPC, NUM   ,     NAV    , RSH_SPC, SYM_ENT, KC_RGUI, KC_APP
+     LCT_NUB , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC, FKEYS ,     KC_CAPS, KC_RBRC,   KC_N ,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, RCT_NUH,
+                                KC_DEL , KC_LGUI, LSH_ENT, KC_SPC , NUM   ,     NAV    , SYM    , RSH_ENT, KC_RGUI, KC_APP
     ),
 
 /*
