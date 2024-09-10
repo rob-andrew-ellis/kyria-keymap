@@ -14,14 +14,29 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+//#pragma once
+
+//#define SERIAL_USART_TX_PIN GP1
+//#define SERIAL_USART_RX_PIN GP0
+//#define MASTER_LEFT
+//#define RP2040_FLASH_GD25Q64CS //??
+//#define SPLIT_USB_DETECT
+//#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
+//#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
+
+//#define SERIAL_PIO_USE_PIO0
+//#define USE_SERIAL
+//#define SOFT_SERIAL_PIN GP1
+
 #pragma once
 
-#define SERIAL_USTART_TX_PIN GP1
-#define MASTER_LEFT
-#define RP2040_FLASH_GD25Q64CS //??
+// Serial communication
+#define SERIAL_USART_TX_PIN GP1
+#define SERIAL_USART_RX_PIN GP0
+
+// Split keyboard configuration
+//#define MASTER_LEFT
 #define SPLIT_USB_DETECT
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
 
 #define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
@@ -45,3 +60,16 @@
 #    endif
 #endif
 
+// RP2040 specific configuration
+#define RP2040_FLASH_GD25Q64CS
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U
+
+// Debug options
+#define DEBUG_MATRIX_SCAN_RATE
+#define DEBUG_MATRIX
+#define DEBUG_SPLIT_HANDEDNESS
+
+// Additional split keyboard settings
+//#define SOFT_SERIAL_PIN D1
+#define SELECT_SOFT_SERIAL_SPEED 1
